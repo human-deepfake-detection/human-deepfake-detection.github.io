@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human Deepfake Detection | IEEE S&amp;P 2027</title>
+  <meta name="description" content="A cross-model study of human detection of deepfake face images, taxonomy-guided training, and five-month retention. IEEE Symposium on Security and Privacy 2027.">
+  <meta name="theme-color" content="#343a40">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Human Deepfake Detection: From GAN-Based Models to GPT-5">
+  <meta property="og:description" content="Where do people look for deepfakes? A cross-model study of human detection, targeted training, and five-month retention. IEEE S&amp;P 2027.">
+  <meta name="twitter:card" content="summary">
+  <meta name="citation_title" content="From GAN-Based Models to GPT-5: A Taxonomy-Guided Study of Human Performance in Detecting Deepfake Face Images">
+  <meta name="citation_author" content="Zhiqing Guo"><meta name="citation_author" content="Lixin Jia"><meta name="citation_author" content="Luning Sun"><meta name="citation_author" content="Xiaowei Chen"><meta name="citation_author" content="Guofeng Yu"><meta name="citation_author" content="Liejun Wang"><meta name="citation_author" content="Gaobo Yang"><meta name="citation_author" content="David Stillwell"><meta name="citation_author" content="Thorsten Holz"><meta name="citation_author" content="Shujun Li">
+  <meta name="citation_publication_date" content="2026/10/16">
+  <meta name="citation_arxiv_id" content="2610.23144">
+  <meta name="citation_doi" content="10.48550/arXiv.2610.23144">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2610.23144">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/styles.css?v=b52488a8143b">
+  <script src="./assets/js/site-config.js?v=aab604550b34" defer></script>
+  <script src="./assets/js/research-data.js?v=ed649d7b0af3" defer></script>
+  <script src="./assets/js/main.js?v=ce2b9d5c2a4c" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Human Deepfake Detection home">Human Deepfake Detection</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation"><span aria-hidden="true">☰</span></button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation"><a href="#overview">Overview</a><a href="#taxonomy">Taxonomy</a><a href="#findings">Findings</a><a href="#training">Training</a><a href="#paper">Paper</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero container">
+      <figure class="hero-image"><img src="./assets/images/hero-stylegan3.png" width="1024" height="1024" alt="Synthetic face from the StyleGAN3 study corpus" fetchpriority="high"><figcaption>StyleGAN3 · synthetic face example</figcaption></figure>
+      <div class="hero-copy">
+        <h1>From GAN-Based Models to GPT-5:<span class="hero-subtitle">A Taxonomy-Guided Study of Human Performance in Detecting Deepfake Face Images</span></h1>
+        <div class="authors-section" aria-label="Authors and affiliations"><p class="authors"><span class="author-person"><span data-author="Zhiqing Guo">Zhiqing Guo</span><sup>1,†</sup></span> <span class="author-person"><span data-author="Lixin Jia">Lixin Jia</span><sup>1,†</sup></span> <span class="author-person"><span data-author="Luning Sun">Luning Sun</span><sup>2,†</sup></span> <span class="author-person"><span data-author="Xiaowei Chen">Xiaowei Chen</span><sup>3</sup></span> <span class="author-person"><span data-author="Guofeng Yu">Guofeng Yu</span><sup>1</sup></span> <span class="author-person"><span data-author="Liejun Wang">Liejun Wang</span><sup>1,*</sup></span> <span class="author-person"><span data-author="Gaobo Yang">Gaobo Yang</span><sup>4</sup></span> <span class="author-person"><span data-author="David Stillwell">David Stillwell</span><sup>2</sup></span> <span class="author-person"><span data-author="Thorsten Holz">Thorsten Holz</span><sup>3</sup></span> <span class="author-person"><span data-author="Shujun Li">Shujun Li</span><sup>5,*</sup></span></p><p class="affiliations"><span><sup>1</sup> Xinjiang University</span><span><sup>2</sup> University of Cambridge</span><span><sup>3</sup> Max Planck Institute for Security and Privacy</span><span><sup>4</sup> Hunan University</span><span><sup>5</sup> iCSS, University of Kent, London and South East University Group</span></p><p class="author-note">† Equal contribution <span>·</span> * Corresponding authors</p></div>
+        <p class="publication-note">To appear at the <strong>2027 IEEE Symposium on Security and Privacy (S&amp;P)</strong>.</p>
+        <div class="hero-actions"><a class="button button-primary" href="https://arxiv.org/pdf/2610.23144" target="_blank" rel="noopener">Paper</a><a class="button button-outline" data-artifact-link href="https://doi.org/10.5281/zenodo.22843044" target="_blank" rel="noopener">Research Artifact</a><a class="button button-outline" data-repository-link hidden href="#paper" target="_blank" rel="noopener">GitHub</a><a class="button button-outline" href="#training">Training Materials</a></div>
+      </div>
+    </section>
+    <section id="overview" class="section">
+      <div class="container">
+        <h2 class="section-title"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 15 16 4l13 11-3 3-2-2v13h-6v-9h-5v9H7V16l-2 2z"/></svg>Overview</h2>
+        <div class="overview-grid">
+          <div class="prose"><h3>Human Detection of Deepfake Face Images</h3><p>Generative models have evolved from GAN-based architectures to diffusion models and multimodal large language models. We investigate how human detection performance differs across these generators, how training can help, and whether the effects persist over time.</p><p>We introduce the <strong>Deepfake Face Artifact Taxonomy (DFAT)</strong>, a structured vocabulary of human-recognizable artifacts in generated faces. DFAT covers four domains: face, style, background, and accessories.</p><p>Our online experiment involved <strong>524 participants</strong> and five generative models: StyleGAN2, StyleGAN3, GRAM-HD, Stable Diffusion 3.5, and image generation through the GPT-5 interface. We compared general-purpose and model-specific training, followed by a <strong>five-month follow-up with 342 participants</strong>.</p></div>
+          <figure class="model-examples"><div class="portrait-grid"><figure><img src="./assets/images/hero-stylegan3.png" width="1024" height="1024" alt="StyleGAN3-generated face example" loading="lazy"><figcaption>StyleGAN3</figcaption></figure><figure><img src="./assets/images/hero-sd3-5-portrait-49.png" width="1024" height="1024" alt="SD3.5-generated face example" loading="lazy"><figcaption>SD3.5</figcaption></figure><figure><img src="./assets/images/hero-gpt-5.png" width="1024" height="1024" alt="Face example generated through the GPT-5 interface" loading="lazy"><figcaption>GPT-5</figcaption></figure></div><figcaption>Representative AI-generated face images from the study corpus. Different generators exhibit different visual artifacts.</figcaption></figure>
+        </div>
+        <div class="key-findings"><h3>Key Findings</h3><ul><li><strong>Detection performance is model-dependent.</strong> In the sampled images, SD3.5 and GPT-5 faces were easier to detect than StyleGAN2 and StyleGAN3 faces.</li><li><strong>Taxonomy-guided training improves detection.</strong> Accuracy increased significantly in 13 of 20 experimental conditions, with model-specific guidance especially useful for single-image tasks.</li><li><strong>Training effects persist over time.</strong> No significant accuracy decline was found in the 20 paired comparisons at five months after Holm correction.</li></ul></div>
+      </div>
+    </section>
+    <section id="taxonomy" class="section">
+      <div class="container">
+        <h2 class="section-title"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3h8v7h-8zM3 22h8v7H3zM12 22h8v7h-8zM21 22h8v7h-8z"/><path class="icon-line" d="M16 10v7M7 22v-5h18v5M16 17v5"/></svg>Deepfake Face Artifact Taxonomy</h2>
+        <p>DFAT organizes <strong>18 visual cues</strong> into four artifact domains. Select a domain and a cue to view the original examples and annotations.</p>
+        <div id="domain-tabs" class="domain-tabs" role="tablist" aria-label="Artifact domains"></div>
+        <div id="taxonomy-panel" class="taxonomy-panel" role="tabpanel" tabindex="0" aria-labelledby="domain-face"><div class="taxonomy-description"><p class="eyebrow" id="domain-label"></p><h3 id="domain-heading"></h3><p id="domain-description"></p><div id="cue-buttons" class="cue-buttons" role="group" aria-label="Visual cues"></div></div><div class="taxonomy-examples"><h4 id="cue-name"></h4><div id="example-images" class="example-images"></div><p id="cue-explanation"></p></div></div>
+      </div>
+    </section>
+    <section id="findings" class="section">
+      <div class="container">
+        <h2 class="section-title"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27h27v2H1V3h2zM7 17h5v7H7zM15 11h5v13h-5zM23 5h5v19h-5z"/></svg>Study Design and Findings</h2>
+        <div class="results-grid"><div class="results-copy"><h3>Training Effectiveness</h3><p>We tested detection before and after training using two presentation formats: a single image, and a side-by-side pair containing one real and one generated face.</p><p>Model-specific training generally produced greater numerical gains. Its clearest advantages over general-purpose training appeared for <strong>SD3.5 and GPT-5 in the single-image task</strong>.</p><p>For GAN-based models, direct differences in gains between training types did not remain significant after Holm correction.</p><p><strong>Overall, 13 of 20 conditions</strong> showed a significant pre–post accuracy gain.</p></div><div class="chart-card"><div class="chart-controls"><div class="segmented" role="group" aria-label="Training type"><button type="button" data-training="specific" aria-pressed="true">Model-specific</button><button type="button" data-training="general" aria-pressed="false">General-purpose</button></div><div class="segmented small" role="group" aria-label="Presentation format"><button type="button" data-format="single" aria-pressed="true">Single image</button><button type="button" data-format="paired" aria-pressed="false">Side by side</button></div></div><div class="chart-topline"><h4>Mean Detection Accuracy</h4><div class="chart-legend"><span><i class="dot-pre"></i>Before training</span><span><i class="dot-post"></i>After training</span></div></div><div id="accuracy-chart" class="accuracy-chart" aria-live="polite"></div><details class="data-details"><summary>View the exact values</summary><div class="table-scroll"><table><caption id="results-caption"></caption><thead><tr><th scope="col">Model</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">n</th></tr></thead><tbody id="results-table"></tbody></table></div></details></div></div>
+        <div class="retention-results"><h3>Five-Month Follow-Up</h3><p><strong>342 participants returned.</strong> None of the 20 paired accuracy comparisons showed a significant decline after Holm correction. Tests on new images showed a similar descriptive pattern.</p></div>
+      </div>
+    </section>
+    <section id="training" class="section">
+      <div class="container">
+        <h2 class="section-title"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 5h26v22H3z"/><path class="icon-cutout" d="m13 10 10 6-10 6z"/></svg>Training Materials</h2>
+        <p>Watch the original training videos used in the study. The general-purpose lesson covers all five generators; model-specific lessons focus on the corresponding artifact profiles. The study also included interactive practice questions with explanatory feedback.</p>
+        <div id="training-tabs" class="training-tabs" role="tablist" aria-label="Training videos"></div>
+        <div id="training-panel" class="training-grid" role="tabpanel" aria-labelledby="lesson-general"><div class="video-shell"><video id="training-video" controls playsinline preload="none" poster="./assets/images/training-video-cover.svg" aria-label="General-purpose DFAT training video"><source src="./assets/videos/general.mp4" type="video/mp4">Your browser does not support embedded video. <a href="./assets/videos/general.mp4">Download the video.</a></video><p class="video-footer"><span>Original study material</span><a id="video-download" href="./assets/videos/general.mp4" download>Download video</a></p></div><div class="training-copy"><h3 id="lesson-title">General-purpose</h3><p id="lesson-description"></p></div></div>
+      </div>
+    </section>
+    <section id="paper" class="section">
+      <div class="container">
+        <h2 class="section-title"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 2h13l7 7v21H6z"/><path class="icon-cutout" d="M18 3v8h8zM10 15h12v2H10zM10 20h12v2H10zM10 25h9v2h-9z"/></svg>Technical Paper</h2>
+        <p>Our work will appear at the <strong>2027 IEEE Symposium on Security and Privacy (S&amp;P)</strong>.</p>
+        <p>The artifact includes the DFAT corpus and annotations, generation prompts, study materials, de-identified data, analysis scripts, and the experimental website source code.</p>
+        <p class="artifact-badges" aria-label="Artifact evaluation badges reported in the paper"><span>Artifact Available</span><span>Artifact Functional</span><span>Artifact Reproduced</span></p>
+        <h3>Abstract</h3><div class="abstract-text"><p>Generative models for deepfakes have rapidly evolved from GAN-based architectures to diffusion models and multimodal large language models (MLLMs). However, empirical research on human performance in detecting deepfake face images has not kept pace. It remains unclear if (and how) detection performance varies across generative models and whether model-specific training improves detection more effectively than general-purpose training.</p><p>In this paper, we propose the Deepfake Face Artifact Taxonomy (DFAT), a cross-model taxonomy of human-recognizable visual artifacts in deepfake face images, based on which we build both general-purpose and model-specific training materials. Through an online experiment (n = 524), we examined human performance in detecting deepfake face images and evaluated training efficacy across five representative generative models: three GAN-based, one diffusion-based, and one MLLM (GPT-5). Our results show that participants’ detection accuracy was strongly model-dependent and that images generated by more recent and advanced models were not necessarily harder to detect. After training, participants achieved significant performance gains across most conditions, and their improvement varied by model. Notably, model-specific training generally yielded greater numerical gains than general-purpose training.</p><p>In a five-month follow-up test (n = 342), we observed no significant decline in detection accuracy and no significant increase in perceived stress. Overall, our findings provide actionable insights for designing effective, sustainable, and targeted training programs to counter the growing threat posed by deepfakes.</p></div>
+        <div class="citation-card"><div class="citation-heading"><h3>BibTeX</h3><button id="copy-citation" type="button">Copy BibTeX</button></div><pre><code id="bibtex">@misc{guo2026dfat,
+  author = {Guo, Zhiqing and Jia, Lixin and Sun, Luning and Chen, Xiaowei and Yu, Guofeng and
+    Wang, Liejun and Yang, Gaobo and Stillwell, David and Holz, Thorsten and Li, Shujun},
+  title = {From {GAN}-Based Models to {GPT-5}: A Taxonomy-Guided Study of Human Performance
+    in Detecting Deepfake Face Images},
+  year = {2026},
+  eprint = {2610.23144},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  doi = {10.48550/arXiv.2610.23144},
+  url = {https://arxiv.org/abs/2610.23144}
+}</code></pre><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p><a href="./assets/documents/dfat.bib" download>Download BibTeX (.bib)</a></div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="site-footer"><div class="container footer-grid"><div><h4>Human Deepfake Detection</h4><p>From GAN-Based Models to GPT-5<br>2027 IEEE Symposium on Security and Privacy</p></div><div class="footer-note"><p>No analytics or tracking cookies.</p><a href="#home">Back to top</a></div></div></footer>
+  <dialog id="image-dialog" class="image-dialog" aria-labelledby="image-dialog-caption"><button type="button" id="close-image" aria-label="Close enlarged image">×</button><img id="enlarged-image" alt=""><p id="image-dialog-caption"></p></dialog>
+  <noscript><div class="noscript-message">Interactive examples and charts require JavaScript. The <a href="https://arxiv.org/pdf/2610.23144">paper</a> and general-purpose video remain available.</div></noscript>
+</body>
+</html>
